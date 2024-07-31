@@ -34,3 +34,30 @@ metadata:
 spec:
   ca:
     secretName: root-secret
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argo-cert
+  namespace: argocd
+spec:
+  commonName: localhost
+  dnsNames:
+    - localhost
+    - argocd-server
+    - argocd-server.argocd
+    - argocd-server.argocd.svc
+    - argocd-server.argocd.svc.cluster.local
+  secretName: argocd-server-tls
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    size: 2048
+  isCA: false
+  usages:
+    - server auth
+    - client auth
+  issuerRef:
+    name: selfsigned-issuer
+    kind: ClusterIssuer
+    group: cert-manager.io
