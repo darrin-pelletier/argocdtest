@@ -39,6 +39,7 @@ metadata:
   name: argo-cert
   namespace: argocd
 spec:
+  nameConstraints: false
   commonName: localhost
   dnsNames:
     - localhost
