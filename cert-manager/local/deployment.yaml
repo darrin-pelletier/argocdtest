@@ -11,10 +11,9 @@ metadata:
   name: atym-selfsigned-ca
   namespace: cert-manager
 spec:
-  dnsNames:
-  - localhost
   isCA: true
   secretName: root-secret
+  commonName: atym-selfsigned-ca
   privateKey:
     algorithm: RSA
     encoding: PKCS1
