@@ -3,6 +3,7 @@ kind: ClusterIssuer
 metadata:
   name: selfsigned-issuer
 spec:
+  isCA: true
   selfSigned: {}
 ---
 apiVersion: cert-manager.io/v1
