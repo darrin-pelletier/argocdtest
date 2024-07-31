@@ -12,9 +12,6 @@ metadata:
   namespace: cert-manager
 spec:
   isCA: true
-  usages:
-    - server auth
-    - client auth
   secretName: root-secret
   commonName: atym-selfsigned-ca
   privateKey:
