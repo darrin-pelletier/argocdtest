@@ -11,7 +11,7 @@ kind: Namespace
 metadata:
   name: petstore
   labels:
-    name: test
+    "discovery.solo.io/function_discovery": enabled
 ---
 apiVersion: apps/v1
 kind: Deployment
