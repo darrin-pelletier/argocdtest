@@ -3,7 +3,6 @@ kind: ClusterIssuer
 metadata:
   name: selfsigned-issuer
 spec:
-  isCA: true
   selfSigned: {}
 ---
 apiVersion: cert-manager.io/v1
@@ -12,7 +11,6 @@ metadata:
   name: atym-selfsigned-ca
   namespace: cert-manager
 spec:
-  isCA: true
   secretName: root-secret
   commonName: atym-selfsigned-ca
   privateKey:
@@ -53,7 +51,6 @@ spec:
     algorithm: RSA
     encoding: PKCS1
     size: 2048
-  isCA: false
   usages:
     - server auth
     - client auth
