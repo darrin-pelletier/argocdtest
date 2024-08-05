@@ -5,7 +5,13 @@
 #                        #
 #                        #
 ##########################
-
+# petstore service
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: petstore
+  labels:
+    "discovery.solo.io/function_discovery": enabled
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -13,7 +19,7 @@ metadata:
   labels:
     app: petstore
   name: petstore
-  namespace: default
+  namespace: petstore
 spec:
   selector:
     matchLabels:
@@ -35,7 +41,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: petstore
-  namespace: default
+  namespace: petstore
   labels:
     service: petstore
 spec:
