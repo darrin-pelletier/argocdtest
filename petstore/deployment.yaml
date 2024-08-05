@@ -5,13 +5,7 @@
 #                        #
 #                        #
 ##########################
-# petstore service
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: default
-  labels:
-    "discovery.solo.io/function_discovery": enabled
+
 ---
 apiVersion: apps/v1
 kind: Deployment
