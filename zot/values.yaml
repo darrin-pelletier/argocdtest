@@ -18,7 +18,7 @@ serviceAccount:
   name: ""
 service:
   type: LoadBalancer
-  port: 5000
+  port: 8080
   nodePort: null  # Set to a specific port if type is NodePort
   # Annotations to add to the service
   annotations: {}
