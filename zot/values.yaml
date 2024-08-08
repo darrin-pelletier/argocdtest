@@ -116,9 +116,9 @@ configFiles:
 #    mountPath: "/secrets/s2"
 externalSecrets: 
   - secretName: "server-cert"
-    mountPath: "/secrets/tls.crt"
+    mountPath: "/secrets/server-cert"
   - secretName: "server-key"
-    mountPath: "/secrets/tls.key"
+    mountPath: "/secrets/server-key"
 # If mountSecret is true, the Secret named $CHART_RELEASE-secret is mounted on
 # the pod's '/secret' directory (it is used to keep files with passwords, like
 # a `htpasswd` file)
