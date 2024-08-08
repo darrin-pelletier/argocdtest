@@ -58,8 +58,6 @@ spec:
               protocol: TCP
           {{- if or (not (empty .Values.extraVolumeMounts)) .Values.mountConfig .Values.mountSecret .Values.persistence .Values.externalSecrets }}
           volumeMounts:
-            - mountPath: '/secret'
-              name: server-cert
           {{- if .Values.mountConfig }}
             - mountPath: '/etc/zot'
               name: {{ .Release.Name }}-config
