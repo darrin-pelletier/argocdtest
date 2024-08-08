@@ -69,7 +69,7 @@ configFiles:
   config.json: |-
     {
       "storage": { "rootDirectory": "/var/lib/registry" },
-      "http": { "address": "0.0.0.0", "port": "5000" ,"realm": "zot", "tls" : { "cert": "/etc/zot/cert.pem", "key":"/etc/zot/cert.key" }}, 
+      "http": { "address": "0.0.0.0", "port": "5000" ,"realm": "zot", "tls" : { "cert": "/secret/server-cert/cert.pem", "key":"/secret/server-cert/cert.key" }}, 
       "log": { "level": "debug" }
     }
 # Alternatively, the configuration can include authentication and acessControl
@@ -116,9 +116,9 @@ configFiles:
 #    mountPath: "/secrets/s2"
 externalSecrets: 
   - secretName: "server-cert"
-    mountPath: "/etc/zot"
+    mountPath: "/secret/server-cert"
   - secretName: "server-key"
-    mountPath: "/etc/zot"
+    mountPath: "/secret/server-key"
 # If mountSecret is true, the Secret named $CHART_RELEASE-secret is mounted on
 # the pod's '/secret' directory (it is used to keep files with passwords, like
 # a `htpasswd` file)
