@@ -18,7 +18,7 @@ serviceAccount:
   name: ""
 service:
   type: NodePort
-  port: 5000
+  port: 8080
   nodePort: null  # Set to a specific port if type is NodePort
   # Annotations to add to the service
   annotations: {}
@@ -69,7 +69,7 @@ configFiles:
   config.json: |-
     {
       "storage": { "rootDirectory": "/var/lib/registry" },
-      "http": { "address": "0.0.0.0", "port": "5000" , "tls" : { "cert": "/secrets/server-cert/tls.crt", "key":"/secrets/server-key/tls.key" }}, 
+      "http": { "address": "127.0.0.1", "port": "8080" , "tls" : { "cert": "/secrets/server-cert/tls.crt", "key":"/secrets/server-key/tls.key" }}, 
       "log": { "level": "debug" }
     }
 # Alternatively, the configuration can include authentication and acessControl
