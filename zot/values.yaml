@@ -49,7 +49,7 @@ ingress:
 # By default, Kubernetes HTTP probes use HTTP 'scheme'. So if TLS is enabled
 # in configuration, to prevent failures, the scheme must be set to 'HTTPS'.
 httpGet:
-  scheme: HTTP
+  scheme: HTTPS
 # By default, Kubernetes considers a Pod healthy if the liveness probe returns
 # successfully. However, sometimes applications need additional startup time on
 # their first initialization. By defining a startupProbe, we can allow the
