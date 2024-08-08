@@ -122,7 +122,7 @@ externalSecrets:
 # If mountSecret is true, the Secret named $CHART_RELEASE-secret is mounted on
 # the pod's '/secret' directory (it is used to keep files with passwords, like
 # a `htpasswd` file)
-mountSecret: true
+mountSecret: false
 # If secretFiles does not exist the user is in charge of managing it, again, if
 # you want to manage it the value has to be added empty to avoid using this one
 secretFiles:
