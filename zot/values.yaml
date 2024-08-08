@@ -114,7 +114,7 @@ configFiles:
 #    mountPath: "/secrets/s1"
 #  - secretName: "secret2"
 #    mountPath: "/secrets/s2"
-# externalSecrets: 
+externalSecrets: 
   - secretName: "server-cert"
     mountPath: "/secrets/server-cert"
   - secretName: "server-key"
