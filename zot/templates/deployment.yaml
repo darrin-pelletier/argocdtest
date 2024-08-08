@@ -7,7 +7,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "zot.fullname" . }}
-  namespace: zot
+  namespace: {{ include "zot.fullname" . }}
   labels:
     {{- include "zot.labels" . | nindent 4 }}
 spec:
