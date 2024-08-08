@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "zot.fullname" . }}
-  namespace: {{ include "zot.serviceAccountName" . }}
+  namespace: {{ include "zot.namespace" . }}
   labels:
     {{- include "zot.labels" . | nindent 4 }}
 {{- with .Values.service.annotations }}
