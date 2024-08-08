@@ -58,12 +58,6 @@ spec:
               protocol: TCP
           {{- if or (not (empty .Values.extraVolumeMounts)) .Values.mountConfig .Values.mountSecret .Values.persistence .Values.externalSecrets }}
           volumeMounts:
-          - mountPath: "/data/server.cert"
-            name: server-cert
-            readOnly: true
-          - mountPath: "/data/server.key"
-            name: server-key
-            readOnly: true
           {{- if .Values.mountConfig }}
             - mountPath: '/etc/zot'
               name: {{ .Release.Name }}-config
@@ -123,12 +117,6 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- if or .Values.mountConfig .Values.mountSecret .Values.persistence .Values.externalSecrets (not (empty .Values.extraVolumes))}}
       volumes:
-         - name: server-cert
-           secret:
-             secretName: server.cert
-        - name: server-key
-          secret:
-            secretName: server.key
       {{- if .Values.mountConfig }}
         - name: {{ .Release.Name }}-config
           configMap:
