@@ -69,7 +69,7 @@ configFiles:
   config.json: |-
     {
       "storage": { "rootDirectory": "/var/lib/registry" },
-      "http": { "address": "0.0.0.0", "port": "5000" , "tls" : { "cert": "/secrets/server-cert/cert.pem", "key":"/secrets/server-key/key.pem" }}, 
+      "http": { "address": "0.0.0.0", "port": "8080" ,"realm": "zot", "tls" : { "cert": "/secrets/server-cert/cert.pem", "key":"/secrets/server-key/key.pem" }}, 
       "log": { "level": "debug" }
     }
 # Alternatively, the configuration can include authentication and acessControl
