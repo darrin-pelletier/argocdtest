@@ -134,13 +134,13 @@ secretFiles:
 # If persistence is 'true' the service uses a persistentVolumeClaim to mount a
 # volume for zot on '/var/lib/registry'; by default the pvc used is named
 # '$CHART_RELEASE-pvc', but the name can be changed below
-persistence: false
+persistence: true
 # PVC data, only used if persistence is 'true'
 pvc:
   # Make the chart create the PVC, this option is used with storageClasses that
   # can create volumes dynamically, if that is not the case is better to do it
   # manually and set create to false
-  create: false
+  create: true
   # Name of the PVC to use or create if persistence is enabled, if not set the
   # value '$CHART_RELEASE-pvc' is used
   name: null
