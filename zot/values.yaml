@@ -17,7 +17,7 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 service:
-  type: ClusterIP
+  type: NodePort
   port: 5000
   nodePort: null  # Set to a specific port if type is NodePort
   # Annotations to add to the service
