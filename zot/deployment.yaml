@@ -16,5 +16,5 @@ apiVersion: v2
       annotations: {}
       name: ""
     service:
-      type: LoadBalance
+      type: LoadBalancer
       port: 5000
