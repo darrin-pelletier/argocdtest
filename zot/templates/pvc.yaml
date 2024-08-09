@@ -10,6 +10,7 @@ spec:
   resources:
     requests:
       storage: {{ .Values.pvc.storage | default "8Gi" }}
+  volumeName: pv-zot
   {{- if .Values.pvc.storageClassName }}
   storageClassName: {{ .Values.pvc.storageClassName }}
   {{- end }}
